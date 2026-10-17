@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container w-100">
+            <div class="header-top d-flex justify-content-between align-items-center">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="../assets/images/logo.png" alt="Logo" style=" height: 70px;">
+                    </a>
+                </div>
+                <nav class="nav d-flex justify-content-center align-items-center">
+                    <ul class="menu-list d-flex justify-content-center align-items-center m-0 p-0">
+                        <li class="menu-item d-flex p-3 "><a href="" class="menu-link text-decoration-none text-dark fs-5">Products</a></li>
+                        <li class="menu-item d-flex p-3 "><a href="" class="menu-link text-decoration-none text-dark fs-5">Sale</a></li>
+                        <li class="menu-item d-flex p-3 "><a href="" class="menu-link text-decoration-none text-dark fs-5">Account</a></li>
+                        <li class="menu-item d-flex p-3 "><a href="" class="menu-link text-decoration-none text-dark fs-5">About Us</a></li>
+                    </ul>
+                </nav>
+                <div class="search d-flex justify-content-center align-items-center">
+                    <form action="" class="form-search d-flex justify-content-center align-items-center">
+                        <input type="text" placeholder="Search..." class="form-control">
+                        <button type="submit" class="btn btn-primary bg-secondary border-secondary" ">
+                            <i class="fa-solid fa-magnifying-glass" style="color: rgb(255, 255, 255);"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="cart d-flex justify-content-center align-items-center">
+                    <a href="../html/cart.html" class="fs-4">
+                        <i class="fa-brands fa-opencart text-dark"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- section1 -->
+    <section class="section-1">
+       <div class="container">
+         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="../assets/images/bg-banner1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="../assets/images/bg-banner2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="../assets/images/bg-banner3.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+       </div>
+    </section>
+
+    <!-- section2 -->
+    <section class="section-2">
+        <div class="container">
+
+            <!-- title -->
+            <div class="best-seller d-flex justify-content-start align-items-center gap-2 py-3" >
+                <h3 class="fs-4 m-0">Best Seller</h3>
+                <i class="fa-solid fa-fire fs-4" style="color: rgb(239, 187, 0);"></i>
+            </div>
+
+            
+            <!-- Slider sản phẩm -->
+            <div id="productCarousel" class="carousel slide ">
+
+                <div class="carousel-inner">
+
+                    <!-- Trang 1: 3 sản phẩm đầu tiên -->
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center gap-3">
+
+                            <!-- Sản phẩm 1 -->
+                            <div class="card" style="width: 18rem;">
+                                <img src="../assets/images/product2.jpg"
+                                    class="card-img-top img-fluid object-fit-contain" alt="Product 1 ">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product 1</h5>
+                                    <p class="card-text">Mô tả sản phẩm 1.</p>
+                                    <a href="#" class="btn btn-primary">Mua ngay</a>
+                                </div>
+                            </div>
+
+                            <!-- Sản phẩm 2 -->
+                            <div class="card" style="width: 18rem;">
+                                <img src="../assets/images/product3.jpg"
+                                    class="card-img-top img-fluid object-fit-contain" alt="Product 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product 2</h5>
+                                    <p class="card-text">Mô tả sản phẩm 2.</p>
+                                    <a href="#" class="btn btn-primary">Mua ngay</a>
+                                </div>
+                            </div>
+
+                            <!-- Sản phẩm 3 -->
+                            <div class="card" style="width: 18rem;">
+                                <img src="../assets/images/product4.jpg"
+                                    class="card-img-top img-fluid object-fit-contain" alt="Product 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product 3</h5>
+                                    <p class="card-text">Mô tả sản phẩm 3.</p>
+                                    <a href="#" class="btn btn-primary">Mua ngay</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Trang 2: 3 sản phẩm tiếp theo -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center gap-3">
+
+                            <!-- Sản phẩm 4 -->
+                            <div class="card" style="width: 18rem;">
+                                <img src="../assets/images/product5.jpg"
+                                    class="card-img-top img-fluid object-fit-cover" alt="Product 4">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product 4</h5>
+                                    <p class="card-text">Mô tả sản phẩm 4.</p>
+                                    <a href="#" class="btn btn-primary">Mua ngay</a>
+                                </div>
+                            </div>
+
+                            <!-- Sản phẩm 5 -->
+                            <div class="card" style="width: 18rem;">
+                                <img src="../assets/images/product6.jpg"
+                                    class="card-img-top img-fluid object-fit-cover" alt="Product 5">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product 5</h5>
+                                    <p class="card-text">Mô tả sản phẩm 5.</p>
+                                    <a href="#" class="btn btn-primary">Mua ngay</a>
+                                </div>
+                            </div>
+
+                            <!-- Sản phẩm 6 -->
+                            <div class="card" style="width: 18rem;">
+                                <img src="../assets/images/product7.jpg"
+                                    class="card-img-top img-fluid object-fit-cover alt="Product 6">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product 6</h5>
+                                    <p class="card-text">Mô tả sản phẩm 6.</p>
+                                    <a href="#" class="btn btn-primary">Mua ngay</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Nút lùi -->
+                <button class="carousel-control-prev "
+                        type="button"
+                        data-bs-target="#productCarousel"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark"
+                        aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <!-- Nút tiến -->
+                <button class="carousel-control-next "
+                        type="button"
+                        data-bs-target="#productCarousel"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark"
+                        aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- section3 -->
+    <section class="section-3">
+        <div class="container">
+
+            <!-- title -->
+            <div class="sales-product d-flex justify-content-start align-items-center gap-2 py-3" >
+                <h3 class="fs-4 m-0">Sales Product</h3>
+                <i class="fa-solid fa-tag" style="color: rgb(255, 59, 59);"></i>
+            </div>
+
+            <!-- Slider sản phẩm -->
+            <div id="Sales-productCarousel" class="carousel slide ">
+
+                <div class="carousel-inner">
+
+                    <!-- Trang 1: 3 sản phẩm đầu tiên -->
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center gap-3">
+
+                            <!-- Sản phẩm 1 -->
+                            <div class="card" style="width: 18rem;">
+                                <img src="../assets/images/S-product1.jpg"
+                                    class="card-img-top img-fluid object-fit-contain" alt="Product 1 ">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product 1</h5>
+                                    <p class="card-text">Mô tả sản phẩm 1.</p>
+                                    <a href="#" class="btn btn-primary">Mua ngay</a>
+                                </div>
+                            </div>
+
+                            <!-- Sản phẩm 2 -->
+                            <div class="card" style="width: 18rem;">
+                                <img src="../assets/images/S-product2.jpg"
+                                    class="card-img-top img-fluid object-fit-contain" alt="Product 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product 2</h5>
+                                    <p class="card-text">Mô tả sản phẩm 2.</p>
+                                    <a href="#" class="btn btn-primary">Mua ngay</a>
+                                </div>
+                            </div>
+
+                            <!-- Sản phẩm 3 -->
+                            <div class="card" style="width: 18rem;">
+                                <img src="../assets/images/S-product3.jpg"
+                                    class="card-img-top img-fluid object-fit-contain" alt="Product 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product 3</h5>
+                                    <p class="card-text">Mô tả sản phẩm 3.</p>
+                                    <a href="#" class="btn btn-primary">Mua ngay</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Trang 2: 3 sản phẩm tiếp theo -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center gap-3">
+
+                            <!-- Sản phẩm 4 -->
+                            <div class="card" style="width: 18rem;">
+                                <img src="../assets/images/S-product4.jpg"
+                                    class="card-img-top img-fluid object-fit-cover" alt="Product 4">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product 4</h5>
+                                    <p class="card-text">Mô tả sản phẩm 4.</p>
+                                    <a href="#" class="btn btn-primary">Mua ngay</a>
+                                </div>
+                            </div>
+
+                            <!-- Sản phẩm 5 -->
+                            <div class="card" style="width: 18rem;">
+                                <img src="../assets/images/S-product5.jpg"
+                                    class="card-img-top img-fluid object-fit-cover" alt="Product 5">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product 5</h5>
+                                    <p class="card-text">Mô tả sản phẩm 5.</p>
+                                    <a href="#" class="btn btn-primary">Mua ngay</a>
+                                </div>
+                            </div>
+
+                            <!-- Sản phẩm 6 -->
+                            <div class="card" style="width: 18rem;">
+                                <img src="../assets/images/product2.jpg"
+                                    class="card-img-top img-fluid object-fit-cover" alt="Product 6">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product 6</h5>
+                                    <p class="card-text">Mô tả sản phẩm 6.</p>
+                                    <a href="#" class="btn btn-primary">Mua ngay</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Nút lùi -->
+                <button class="carousel-control-prev bg-info-subtle"
+                        type="button"
+                        data-bs-target="#Sales-productCarousel"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark"
+                        aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <!-- Nút tiến -->
+                <button class="carousel-control-next bg-info-subtle"
+                        type="button"
+                        data-bs-target="#Sales-productCarousel"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark"
+                        aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- section4 -->
+    <section class="section-4">
+        <div class="container">
+            <div class="images-category d-flex justify-content-center align-items-center gap-3">
+
+                <div class="image-item">
+                    <img src="../assets/images/C-Backpacks.jpg" alt="">
+                    <div class="image-title">
+                        <h3>Backpacks</h3>
+                    </div>
+                </div>
+
+                <div class="image-item">
+                    <img src="../assets/images/C-Clutch-Bags.jpg" alt="">
+                    <div class="image-title">
+                        <h3>Clutch Bags</h3>
+                    </div>
+                </div>
+
+                <div class="image-item">
+                    <img src="../assets/images/C-Crossbody-Bags.jpg" alt="">
+                    <div class="image-title">
+                        <h3>Crossbody</h3>
+                    </div>
+                </div>
+
+                <div class="image-item">
+                    <img src="../assets/images/C-Handbags.jpg" alt="">
+                    <div class="image-title">
+                        <h3>Handbags</h3>
+                    </div>
+                </div>
+
+                <div class="image-item">
+                    <img src="../assets/images/C-Shoulder-Bags.jpg" alt="">
+                    <div class="image-title">
+                        <h3>Shoulder Bags</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+<footer class="footer">
+    <div class="container py-4">
+
+        <div class="row justify-content-center">
+
+            <!-- Contact -->
+            <div class="col-md-4">
+                <h5>CONTACT</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Our Location</a></li>
+                    <li><a href="#">Email Us</a></li>
+                    <li><a href="#">Call Us</a></li>
+                    <li><a href="#">Business Hours</a></li>
+                </ul>
+            </div>
+
+            <!-- Customer Service -->
+            <div class="col-md-4">
+                <h5>CUSTOMER SERVICE</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping &amp; Delivery</a></li>
+                    <li><a href="#">Returns &amp; Exchanges</a></li>
+                    <li><a href="#">Order Tracking</a></li>
+                    <li><a href="#">Payment Methods</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-md-4">
+                <h5>SOCIAL MEDIA</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">TikTok</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>
+    
+
+
+    <script src="../js/jquery-4.0.0.min.js"></script>  
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
