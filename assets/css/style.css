@@ -1,31 +1,227 @@
-*{
+:root {
+    --color-cream: #F7EBD3;
+    --color-sand: #FFDBAF;
+    --color-caramel: #CA7B42;
+    --color-brown: #823919;
+    --color-coffee: #521908;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.section-2 .card img {
-    height: 400px;
+body {
+    margin: 0 auto;
 }
-.section-3 .card img {
-    height: 400px;
+
+a {
+    text-decoration: none !important;
 }
-.section-4 img {
-    height: 200px;
+
+img {
+    display: block;
+}
+
+/* Header */
+.header__logo img {
+    height: 70px;
     width: auto;
 }
 
-.section-2 .carousel-control-prev, .section-2 .carousel-control-next,
-.section-3 .carousel-control-prev, .section-3 .carousel-control-next {
-    background-color: rgb(255, 223, 181) !important;
-    opacity: 0.3 !important;
+.header__search {
+    background-color: white;
+    padding: 2px 4px;
+    border: 1px solid black;
+    border-radius: 24px;
+    width: 400px;
 }
 
+.header__search--input {
+    padding: 8px 16px;
+}
 
-/* section4 */
+.header__search--input input {
+    font-size: 14px;
+    outline: 0;
+    border: none;
+}
+
+.header__search--input input::placeholder {
+    font-size: 14px;
+}
+
+.header__search button {
+    background: var(--color-caramel) !important;
+    border-radius: 24px;
+    padding: 8px 24px;
+    font-size: 14px;
+    color: white;
+}
+
+.header__search button:hover {
+    color: white;
+    background: #823919 !important;
+}
+
+.header__cart {
+    margin-right: 30px;
+}
+/* End Header */
+
+/* Section 1 */
+.section-1 .banner__image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+/* End Section 1 */
+
+/* Product Card */
+/* 4 card chia đều trong 1 slide */
+.product-card {
+    flex: 1 1 0;
+    min-width: 0;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.16);
+}
+
+/* card chỉ còn ảnh — khung ảnh là mốc định vị cho overlay */
+.product-card__media {
+    position: relative;
+    height: 340px;
+    overflow: hidden;
+}
+
+.product-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-card__image {
+    transform: scale(1.05);
+}
+
+/* overlay: nằm ở đáy ảnh, cao 50%, mặc định ẩn xuống dưới */
+.product-card__overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, var(--color-coffee), rgba(82, 25, 8, 0));
+    transform: translateY(100%);   /* đẩy khuất xuống dưới */
+    opacity: 0;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+/* hover: overlay trượt từ dưới lên, hiện ra */
+.product-card:hover .product-card__overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.product-card__btn {
+    background: var(--color-brown);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 24px;
+    padding: 10px 26px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.product-card__btn:hover {
+    background: var(--color-coffee);
+    color: #fff;
+}
+
+.product-card__body {
+    padding: 14px 16px 18px;
+    text-align: center;
+}
+
+.product-card__title {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-card__price {
+    font-size: 15px;
+    font-weight: 600;
+    color: #823919;
+    margin: 0;
+}
+/* End Product Card */
+
+/* Slider Section 2 + 3 */
+/* chừa chỗ cho bóng đổ, tránh carousel cắt mất */
+.section-2 .carousel-item > .d-flex,
+.section-3 .carousel-item > .d-flex {
+    padding: 16px 4px 28px;
+}
+
+/* nút lùi / tiến: khối tròn tông nâu của template */
+.section-2 .carousel-control-prev,
+.section-2 .carousel-control-next,
+.section-3 .carousel-control-prev,
+.section-3 .carousel-control-next {
+    width: 48px;
+    height: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: var(--color-brown);
+    opacity: 0.9;
+    transition: background 0.25s ease;
+}
+
+.section-2 .carousel-control-prev {
+    left: -12px;
+}
+.section-2 .carousel-control-next {
+    right: -12px;
+}
+.section-3 .carousel-control-prev {
+    left: -12px;
+}
+.section-3 .carousel-control-next {
+    right: -12px;
+}
+
+.section-2 .carousel-control-prev:hover,
+.section-2 .carousel-control-next:hover,
+.section-3 .carousel-control-prev:hover,
+.section-3 .carousel-control-next:hover {
+    background: var(--color-coffee);
+    opacity: 1;
+}
+/* End Slider Section 2 + 3 */
+
+/* Section 4 */
 .images-category .image-item {
     position: relative;
-    width: 220px;
+    width: calc(100%/4);
     height: 280px;
     overflow: hidden;
 }
@@ -35,35 +231,35 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.4s ease;
 }
 
+/* hover: ảnh zoom nhẹ */
+.images-category .image-item:hover img {
+    transform: scale(1.08);
+}
+
+/* ô tiêu đề giờ là thẻ <a> — sau này link tới loại sản phẩm */
 .images-category .image-title {
     position: absolute;
-    background-color: #fff;
-    padding: 10px 20px;
     bottom: 10%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     z-index: 1;
-    color: #000;
-    text-align: center;
     width: 80%;
-}
-
-.images-category .image-title h3 {
-    font-size: 20px;
-    margin: 0;
-}
-
-
-/* footer */
-.footer .container{
-    background-color: antiquewhite;
-}
-.footer ul li a {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
     text-decoration: none;
-    color: #111;
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
-.footer ul li a:hover {
-    text-decoration: none;
+
+/* hover cơ bản cho nút: đổi sang tông nâu, chữ trắng */
+.images-category .image-title:hover {
+    background-color: #000;
+    color: #fff;
 }
+/* End Section 4 */
